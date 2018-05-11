@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using FFXIV_DungeonMate.Models;
 using FFXIV_DungeonMate.Services;
 
 using Windows.UI.Xaml.Controls;
@@ -34,7 +31,7 @@ namespace FFXIV_DungeonMate.Views
         private void ButtonLoadDefaultData_Click( object sender, Windows.UI.Xaml.RoutedEventArgs e )
         {
             // Load default data
-            DungeonDataService oService = new DungeonDataService();
+            DungeonDataService oService =  new DungeonDataService();
             oService.SetDefaultData();
         }
     }

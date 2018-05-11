@@ -19,15 +19,13 @@
 		<Note10Name />
 		<Note1>Easy peasy!</Note1>
 		<Note2>Giant Clam - Invulnerable when closed.</Note2>
-		<Note3>
-			- Click the correct color coral, or just guess! (May get additional adds, or a debuff if you select incorrect color).
+		<Note3>- Click the correct color coral, or just guess! (May get additional adds, or a debuff if you select incorrect color).
 			- Only has avoidable AOE damage.
 		</Note3>
 		<Note4>Two additional adds. Kill in any order you'd like. Captain will run away when taken enough damage.</Note4>
 		<Note5>Need to kill this mob to get key drop to leave area.</Note5>
 		<Note6>Same encounter as earlier, except he spawns Scurvy Dogs during fight.</Note6>
-		<Note7>
-			- Four grates in corners will start to ripple, and can be interacted with to avoid adds.
+		<Note7>- Four grates in corners will start to ripple, and can be interacted with to avoid adds.
 			- Frontal cone attack to avoid
 		</Note7>
 		<Note8 />
@@ -49,8 +47,7 @@
 		<Note1>Main goal: destroy the four orbs and the rosary.</Note1>
 		<Note2>The four orbs are found throughout the dungeon. </Note2>
 		<Note3>Spawn when trying to destroy orbs.</Note3>
-		<Note4>
-			- At every 25%, adds will spawn.
+		<Note4>- At every 25%, adds will spawn.
 			- At 75%, spawns Inconspicuous Imp with a tether, boss is now invulnerable. This needs to be killed before returning to attack boss.
 			- AOE Mind Blast will stun/paralyze. Can be cleansed.
 			- At 25%, spawns two Inconspicuous Imps, same mechanic as above.
@@ -70,17 +67,14 @@
 		<Note5Name>Gyges The Great</Note5Name>
 		<Note1>- Collect all firesand!</Note1>
 		<Note2>- Lots of patrols roaming around, so watch out!</Note2>
-		<Note3>
-			- Lots of adds will spawn, leading to the boss spawn.
+		<Note3>- Lots of adds will spawn, leading to the boss spawn.
 			- Kottos has nothing special.
 		</Note3>
-		<Note4>
-			- Tank should pull boss onto the Improved Blasting Device "volcano".
+		<Note4>- Tank should pull boss onto the Improved Blasting Device "volcano".
 			- Use the blasting device to spawn a Blasting Cap, which should be stacked onto of boss, and will eventually explode doing damage to boss.
 			- Ichorous Ire will spawn into more blobs each time it gets hit the Blasting Cap, for a total of three blasts.
 		</Note4>
-		<Note5>
-			- Avoid frontal cone attack.
+		<Note5>- Avoid frontal cone attack.
 			- Gyges will smash through Boulders, spawning adds. They can be ignore if you are DPS'ing enough.
 		</Note5>
 	</Dungeon>
@@ -96,18 +90,15 @@
 		<Note4Name>Thunderclap Guivre</Note4Name>
 		<Note5Name>Tangata</Note5Name>
 		<Note1>Things.</Note1>
-		<Note2>
-			- Bomb add patrols.
+		<Note2>- Bomb add patrols.
 			- Chain wenches need to be interacted with, random mob(s)/treasure.
 		</Note2>
 		<Note3>- Fire wisps that make it to the bonfire will eject AEO damage.</Note3>
-		<Note4>
-			- Avoid frontal cone.
+		<Note4>- Avoid frontal cone.
 			- When he becomes invulnerable, stay away from water. Group of adds will spawn and need to be killed., Avoid AOE attacks.
 			- Rinse and repeat.
 		</Note4>
-		<Note5>
-			- Becomes invulnerable and spawns fire wisps that will do AOE damage when they get to boss. Kill wisps.
+		<Note5>- Becomes invulnerable and spawns fire wisps that will do AOE damage when they get to boss. Kill wisps.
 			- Avoid frontal cone.
 			- Rinse and repeat.
 		</Note5>

@@ -39,7 +39,7 @@ namespace FFXIV_DungeonMate.Views
         {
             InitializeComponent();
 
-            LoadData();
+            //LoadData();
 
             // Load default data
             //DungeonData = oService.LoadDefaultData() as ObservableCollection<Dungeon>;
@@ -55,22 +55,23 @@ namespace FFXIV_DungeonMate.Views
 
         public async void LoadData()
         {
-            DungeonDataService oService = new DungeonDataService();
+            if ( App.DungeonData.Count == 0 )
+            {
+                DungeonDataService oService = new DungeonDataService();
 
-            App.DungeonData?.Clear();
-            App.DungeonData = await oService.LoadDataAsync<ObservableCollection<Dungeon>>();
+                App.DungeonData?.Clear();
+                App.DungeonData = await oService.LoadDataAsync<ObservableCollection<Dungeon>>();
+            }           
         }
 
         private void DungeonsPage_Loaded( object sender, RoutedEventArgs e )
         {
-            if ( App.DungeonData == null )
+            if ( App.DungeonData != null )
             {
-                return;
-            }
-
-            if ( MasterDetailsViewControl.ViewState == MasterDetailsViewState.Both )
-            {
-                Selected = App.DungeonData.First();
+                if ( App.DungeonData.Count > 0 && MasterDetailsViewControl.ViewState == MasterDetailsViewState.Both )
+                {
+                    Selected = App.DungeonData.First();
+                }
             }
         }
 

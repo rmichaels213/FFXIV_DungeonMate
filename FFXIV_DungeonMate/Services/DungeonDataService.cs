@@ -1,5 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*----------------------------------------
+ * Filename:        DungeonDataService.cs
+ * Created By:      Ryan C. Michaels
+ * Created Date:    05/10/2018
+ * Updated Date:    05/11/2018
+----------------------------------------*/
+
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Reflection;
@@ -19,32 +25,23 @@ namespace FFXIV_DungeonMate.Services
         /// <summary>
         /// Load default Dungeon data.
         /// </summary>
+        /// <returns>Returns the default dungeon data.</returns>
         public ObservableCollection<Dungeon> LoadDefaultData()
         {
             ObservableCollection<Dungeon> result = new ObservableCollection<Dungeon>();
 
             try
             {
-                string defaultDataFileName = Path.Combine( Path.GetDirectoryName( Assembly.GetEntryAssembly().Location ),@"Data\DefaultDungeonData.xml");
-
-
-                XmlDocument xmlDocument = new XmlDocument();
-                //xmlDocument.Load( "DefaultDungeonData.xml" );
-                xmlDocument.Load( defaultDataFileName );
-                string xmlString = xmlDocument.OuterXml;
-
-                using ( StringReader read = new StringReader( xmlString ) )
+                string[] res = Assembly.GetExecutingAssembly().GetManifestResourceNames();
+                
+                using ( Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream( res[0] ) )
                 {
-                    Type outType = typeof( ObservableCollection<Dungeon> );
-
-                    XmlSerializer serializer = new XmlSerializer( outType );
-                    using ( XmlReader reader = new XmlTextReader( read ) )
+                    // If there is data in the file, load it!
+                    if ( stream.Length > 0 )
                     {
-                        result = (ObservableCollection<Dungeon>)serializer.Deserialize( reader );
-                        reader.Close();
+                        var serializer = new XmlSerializer( typeof( ObservableCollection<Dungeon> ) );
+                        result = (ObservableCollection<Dungeon>)serializer.Deserialize( stream );
                     }
-
-                    read.Close();
                 }
             }
             catch ( Exception e )
@@ -60,35 +57,8 @@ namespace FFXIV_DungeonMate.Services
         /// </summary>
         public void SetDefaultData()
         {
-            ObservableCollection<Dungeon> result = new ObservableCollection<Dungeon>();
-
-            try
-            {
-                XmlDocument xmlDocument = new XmlDocument();
-                xmlDocument.Load( "DefaultDungeonData.xml" );
-                string xmlString = xmlDocument.OuterXml;
-
-                using ( StringReader read = new StringReader( xmlString ) )
-                {
-                    Type outType = typeof( ObservableCollection<Dungeon> );
-
-                    XmlSerializer serializer = new XmlSerializer( outType );
-                    using ( XmlReader reader = new XmlTextReader( read ) )
-                    {
-                        result = (ObservableCollection<Dungeon>)serializer.Deserialize( reader );
-                        reader.Close();
-                    }
-
-                    read.Close();
-                }
-            }
-            catch ( Exception e )
-            {
-                Console.Write( e.Message );
-            }
-
-            // Write data
-            //await SaveDataAsync( result );
+            ObservableCollection<Dungeon> result = LoadDefaultData();
+            App.DungeonData = result;
         }
 
         /// <summary>

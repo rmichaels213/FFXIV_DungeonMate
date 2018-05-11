@@ -214,10 +214,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Data\DefaultDungeonData.xml" />
-    <Content Include="Data\UserDungeonData.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <EmbeddedResource Include="Data\DefaultDungeonData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
