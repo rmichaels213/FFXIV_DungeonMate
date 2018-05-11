@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDungeon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Dungeon>
+    <Id>1</Id>
+    <Symbol>57643</Symbol>
+    <Name>Satasha</Name>
+    <Description>After a period of relative silence following the Calamity, the Serpent Reavers have once again taken to terrorizing the inland hamlets of La Noscea, killing the men, kidnapping the women and children, plundering the storehouses, and burning what little they leave behind. For years, it was not known how the pirates were able to raid areas so far from the coast, until a local shepherd sighted a band of painted ruffians entering the Sastasha Seagrot, carrying large quantities of sacks and crates. Could it be that there is more to this cave than meets the eye?</Description>
+    <Note1Name>Notes</Note1Name>
+    <Note1>Giant Clam - Invulnerable when closed.</Note1>
+    <Note2Name>Chopper - Tank and Spank</Note2Name>
+    <Note2>- Click the correct color coral, or just guess! (May get additional adds, or a debuff if you select incorrect color).
+- Only has avoidable AOE damage.</Note2>
+    <Note3Name>Captain Madison Part 1</Note3Name>
+    <Note3>Two additional adds. Kill in any order you'd like. Captain will run away when taken enough damage.</Note3>
+    <Note4Name>Captain's Quarters - Shadowtail Reaver</Note4Name>
+    <Note4>Need to kill this mob to get key drop to leave area.</Note4>
+    <Note5Name>Captain Madison Part 1</Note5Name>
+    <Note5>Same encounter as earlier, except he spawns Scurvy Dogs during fight.</Note5>
+  </Dungeon>
+  <Dungeon>
+    <Id>2</Id>
+    <Symbol>57643</Symbol>
+    <Name>The Tam-Tara Deepcroft</Name>
+    <Note1>No.</Note1>
+  </Dungeon>
+  <Dungeon>
+    <Id>3</Id>
+    <Symbol>57643</Symbol>
+    <Name>Copperbell Mines</Name>
+    <Description>This is a dungeon. Enter at your own risk. Many dangers await you here in the mines...</Description>
+    <Note1>
+This is sample Copperbell Mines. Look out for the boulders. This is sample Copperbell Mines. Yessir. This is a thing. This is sample Copperbell Mines. This is sample Copperbell Mines. Go ahead weary traveler.</Note1>
+    <Note2Name>sdasdfsfdfvsadfd</Note2Name>
+    <Note2>fsdfasfdasddf</Note2>
+    <Note3Name>asfdasdfasfdas</Note3Name>
+    <Note4Name>asfdasdfsa</Note4Name>
+    <Note4>fasfdasdfdsa</Note4>
+  </Dungeon>
+  <Dungeon>
+    <Id>4</Id>
+    <Symbol>57643</Symbol>
+    <Name>Halatali</Name>
+    <Note1>This is sample Halatali.</Note1>
+  </Dungeon>
+  <Dungeon>
+    <Id>5</Id>
+    <Symbol>57643</Symbol>
+    <Name>The Thousand Maws of Toto-Rak</Name>
+    <Note1>This is sample The Thousand Maws of Toto-Rak.</Note1>
+  </Dungeon>
+  <Dungeon>
+    <Id>6</Id>
+    <Symbol>57643</Symbol>
+    <Name>Haukke Manor</Name>
+    <Note1>This is sample Haukke Manor.</Note1>
+  </Dungeon>
+</ArrayOfDungeon>

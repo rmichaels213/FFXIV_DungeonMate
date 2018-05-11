@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDungeon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Dungeon>
+		<Id>1</Id>
+		<Symbol>57643</Symbol>
+		<Name>Sastasha</Name>
+		<Level>15</Level>
+		<Description>After a period of relative silence following the Calamity, the Serpent Reavers have once again taken to terrorizing the inland hamlets of La Noscea, killing the men, kidnapping the women and children, plundering the storehouses, and burning what little they leave behind. For years, it was not known how the pirates were able to raid areas so far from the coast, until a local shepherd sighted a band of painted ruffians entering the Sastasha Seagrot, carrying large quantities of sacks and crates. Could it be that there is more to this cave than meets the eye?</Description>
+		<BestTime>71:34</BestTime>
+		<Note1Name>My Notes</Note1Name>
+		<Note2Name>Mobs</Note2Name>
+		<Note3Name>Chopper - Tank and Spank</Note3Name>
+		<Note4Name>Captain Madison Part 1</Note4Name>
+		<Note5Name>Captain's Quarters - Shadowtail Reaver</Note5Name>
+		<Note6Name>Captain Madison Part 2</Note6Name>
+		<Note7Name>Denn The Orcatoothed</Note7Name>
+		<Note8Name />
+		<Note9Name />
+		<Note10Name />
+		<Note1>Easy peasy!</Note1>
+		<Note2>Giant Clam - Invulnerable when closed.</Note2>
+		<Note3>
+			- Click the correct color coral, or just guess! (May get additional adds, or a debuff if you select incorrect color).
+			- Only has avoidable AOE damage.
+		</Note3>
+		<Note4>Two additional adds. Kill in any order you'd like. Captain will run away when taken enough damage.</Note4>
+		<Note5>Need to kill this mob to get key drop to leave area.</Note5>
+		<Note6>Same encounter as earlier, except he spawns Scurvy Dogs during fight.</Note6>
+		<Note7>
+			- Four grates in corners will start to ripple, and can be interacted with to avoid adds.
+			- Frontal cone attack to avoid
+		</Note7>
+		<Note8 />
+		<Note9 />
+		<Note10 />
+	</Dungeon>
+	<Dungeon>
+		<Id>2</Id>
+		<Symbol>57643</Symbol>
+		<Name>The Tam-Tara Deepcroft</Name>
+		<Level>16</Level>
+		<Description>Since its establishment during Gelmorran times, this subterranean crypt has been used for generations as a final resting place for the remains of rulers and nobles. Since the Calamity, however, the tunnels have become overrun with the Lambs of Dalamud─a deadly cult who worships the now-fallen satellite as their savior. It is in the Deepcroft that these twisted souls silently plot revenge against those who fought to prevent the advent of Dalamud, summoning any dark presence who will aid them to this end...no matter what the cost.</Description>
+		<BestTime>51:23</BestTime>
+		<Note1Name>My Notes</Note1Name>
+		<Note2Name>Destroy Cultist Orbs</Note2Name>
+		<Note3Name>Void Soulcounter (mini boss)</Note3Name>
+		<Note4Name>Galvanth The Dominator</Note4Name>
+		<Note5Name />
+		<Note1>Main goal: destroy the four orbs and the rosary.</Note1>
+		<Note2>The four orbs are found throughout the dungeon. </Note2>
+		<Note3>Spawn when trying to destroy orbs.</Note3>
+		<Note4>
+			- At every 25%, adds will spawn.
+			- At 75%, spawns Inconspicuous Imp with a tether, boss is now invulnerable. This needs to be killed before returning to attack boss.
+			- AOE Mind Blast will stun/paralyze. Can be cleansed.
+			- At 25%, spawns two Inconspicuous Imps, same mechanic as above.
+		</Note4>
+		<Note5 />
+	</Dungeon>
+	<Dungeon>
+		<Id>3</Id>
+		<Symbol>57643</Symbol>
+		<Name>Copperbell Mines</Name>
+		<Level>17</Level>
+		<Description>Abandoned once purged of ore, Copperbell Mines lay untouched for nigh on three centuries until Amajina &amp; Sons Mineral Concern reclaimed the shafts─the guild's sights set on expanding the mines downward in an attempt to tap yet undiscovered veins of valuable metal. Unfortunately, it was not riches the powder kegs uncovered, but sheer terror, for when the smoke cleared, out poured an army of raging giants from the darkest recesses of the mines. The hecatoncheires─thralls of the lost Thorne Dynasty─were, at last, free from their lightless prison, three hundred years of hate fueling their madness.</Description>
+		<Note1Name>My Notes</Note1Name>
+		<Note2Name>Mobs</Note2Name>
+		<Note3Name>Kottos</Note3Name>
+		<Note4Name>Ichorous Ire</Note4Name>
+		<Note5Name>Gyges The Great</Note5Name>
+		<Note1>- Collect all firesand!</Note1>
+		<Note2>- Lots of patrols roaming around, so watch out!</Note2>
+		<Note3>
+			- Lots of adds will spawn, leading to the boss spawn.
+			- Kottos has nothing special.
+		</Note3>
+		<Note4>
+			- Tank should pull boss onto the Improved Blasting Device "volcano".
+			- Use the blasting device to spawn a Blasting Cap, which should be stacked onto of boss, and will eventually explode doing damage to boss.
+			- Ichorous Ire will spawn into more blobs each time it gets hit the Blasting Cap, for a total of three blasts.
+		</Note4>
+		<Note5>
+			- Avoid frontal cone attack.
+			- Gyges will smash through Boulders, spawning adds. They can be ignore if you are DPS'ing enough.
+		</Note5>
+	</Dungeon>
+	<Dungeon>
+		<Id>4</Id>
+		<Symbol>57643</Symbol>
+		<Name>Halatali</Name>
+		<Level>20</Level>
+		<Description>Originally a holy place for the first Lalafell arrived in Eorzea, the twisting labyrinth of natural caverns which wind through this massive mesa were transformed by the Pugilist's Guild into a series of training pits, animal pens and holding cells to accommodate the ever-growing popularity of Ul'dah's coliseum. After the Calamity, however the location was abandoned - those remaining in the pens, left for dead. Not all of them, however, met that fate and now the tunnels are rife with those who survived... as well as the tormented spirits of those who did not.</Description>
+		<Note1Name>My Notes</Note1Name>
+		<Note2Name>Mobs</Note2Name>
+		<Note3Name>Firemane</Note3Name>
+		<Note4Name>Thunderclap Guivre</Note4Name>
+		<Note5Name>Tangata</Note5Name>
+		<Note1>Things.</Note1>
+		<Note2>
+			- Bomb add patrols.
+			- Chain wenches need to be interacted with, random mob(s)/treasure.
+		</Note2>
+		<Note3>- Fire wisps that make it to the bonfire will eject AEO damage.</Note3>
+		<Note4>
+			- Avoid frontal cone.
+			- When he becomes invulnerable, stay away from water. Group of adds will spawn and need to be killed., Avoid AOE attacks.
+			- Rinse and repeat.
+		</Note4>
+		<Note5>
+			- Becomes invulnerable and spawns fire wisps that will do AOE damage when they get to boss. Kill wisps.
+			- Avoid frontal cone.
+			- Rinse and repeat.
+		</Note5>
+	</Dungeon>
+	<Dungeon>
+		<Id>5</Id>
+		<Symbol>57643</Symbol>
+		<Name>The Thousand Maws of Toto-Rak</Name>
+		<Level>24</Level>
+		<Note1>This is sample The Thousand Maws of Toto-Rak.</Note1>
+	</Dungeon>
+	<Dungeon>
+		<Id>6</Id>
+		<Symbol>57643</Symbol>
+		<Name>Haukke Manor</Name>
+		<Level>28</Level>
+		<Note1Name>My Notes</Note1Name>
+		<Note1>This is sample Haukke Manor.</Note1>
+	</Dungeon>
+</ArrayOfDungeon>

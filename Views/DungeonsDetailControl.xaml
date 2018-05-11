@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="FFXIV_DungeonMate.Views.DungeonsDetailControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d"
+    d:DesignWidth="400" >
+    <ScrollViewer Name="ForegroundElement" VerticalScrollMode="Enabled" HorizontalAlignment="Stretch" Padding="12,0">
+        <StackPanel Name="PanelDungeonDetail" HorizontalAlignment="Left" Loaded="PanelDungeonDetail_Loaded">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="5,5,0,5" Width="374">
+                <FontIcon
+                    FontSize="40"
+                    Glyph="{x:Bind MasterMenuItem.Symbol, Mode=OneWay}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+                <TextBlock x:Name="NameTextBox" Margin="12,0,0,0" Text="{x:Bind MasterMenuItem.FullName(), Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
+                <Button x:Name="ButtonDetailDungeonEdit" Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Click="ButtonDetailDungeonEdit_Click"/>
+            </StackPanel>
+            <Grid HorizontalAlignment="Left" Width="374" Margin="0,0,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" x:Name="BestTimeTextBlock" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" >Best time:</TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="BestTimeTextBox" Text="{x:Bind MasterMenuItem.BestTime, Mode=TwoWay}" FontSize="12" FontStyle="Normal" PlaceholderText="Log your best time here!" FontFamily="Segoe UI" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="0,0,0,0" DataContextChanged="BestTimeTextBox_DataContextChanged" />
+            </Grid>
+            <StackPanel Name="PanelDescription" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="DescriptionTextBox" Text="{x:Bind MasterMenuItem.Description, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" AcceptsReturn="true" FontSize="12" FontStyle="Italic" PlaceholderText="Dungeon description" FontFamily="Segoe UI" />
+            </StackPanel>
+            <StackPanel Name="PanelNote1" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note1NameTextBox" Text="{x:Bind MasterMenuItem.Note1Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 1 Name" />
+                <TextBox Name="Note1TextBox" Text="{x:Bind MasterMenuItem.Note1, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 1" />
+                <Button x:Name="ButtonNote1Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote2" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note2NameTextBox" Text="{x:Bind MasterMenuItem.Note2Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 2 Name" />
+                <TextBox x:Name="Note2TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note2}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 2" />
+                <Button x:Name="ButtonNote2Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote3" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note3NameTextBox" Text="{x:Bind MasterMenuItem.Note3Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 3 Name" />
+                <TextBox x:Name="Note3TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note3}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 3" />
+                <Button x:Name="ButtonNote3Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote4" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note4NameTextBox" Text="{x:Bind MasterMenuItem.Note4Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 4 Name" />
+                <TextBox x:Name="Note4TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note4}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 4" />
+                <Button x:Name="ButtonNote4Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote5" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note5NameTextBox" Text="{x:Bind MasterMenuItem.Note5Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 5 Name" />
+                <TextBox x:Name="Note5TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note5}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 5" />
+                <Button x:Name="ButtonNote5Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote6" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note6NameTextBox" Text="{x:Bind MasterMenuItem.Note6Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 6 Name" />
+                <TextBox x:Name="Note6TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note6}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 6" />
+                <Button x:Name="ButtonNote6Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote7" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note7NameTextBox" Text="{x:Bind MasterMenuItem.Note7Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 7 Name" />
+                <TextBox x:Name="Note7TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note7}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 7" />
+                <Button x:Name="ButtonNote7Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote8" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note8NameTextBox" Text="{x:Bind MasterMenuItem.Note8Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 8 Name" />
+                <TextBox x:Name="Note8TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note8}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 8" />
+                <Button x:Name="ButtonNote8Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote9" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note9NameTextBox" Text="{x:Bind MasterMenuItem.Note9Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 9 Name" />
+                <TextBox x:Name="Note9TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note9}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 9" />
+                <Button x:Name="ButtonNote9Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="PanelNote10" Padding="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="0,0,0,0">
+                <TextBox x:Name="Note10NameTextBox" Text="{x:Bind MasterMenuItem.Note10Name, Mode=TwoWay}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" Margin="0,0,0,5" FontFamily="Segoe UI" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" PlaceholderText="Note 10 Name" />
+                <TextBox x:Name="Note10TextBox" Text="{x:Bind Mode=TwoWay, Path=MasterMenuItem.Note10}" IsEnabled="False" AcceptsReturn="true" TextWrapping="wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,5" FontSize="12" PlaceholderText="Note 10" />
+                <Button x:Name="ButtonNote10Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
