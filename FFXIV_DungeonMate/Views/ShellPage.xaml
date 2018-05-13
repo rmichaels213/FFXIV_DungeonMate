@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="FFXIV_DungeonMate.Views.ShellPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
@@ -13,7 +13,7 @@
         SelectedItem="{x:Bind Selected, Mode=OneWay}"
         Header="{x:Bind Selected.Content, Mode=OneWay}"
         ItemInvoked="OnItemInvoked"
-        IsSettingsVisible="False"
+        IsSettingsVisible="True"
         Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
         <NavigationView.MenuItems>
             <!--
@@ -24,7 +24,6 @@
             -->
             <NavigationViewItem x:Uid="Shell_Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
             <NavigationViewItem x:Uid="Shell_Dungeons" Icon="Document" helpers:NavHelper.NavigateTo="views:DungeonsPage" />
-            <NavigationViewItem x:Uid="Shell_More" Icon="Document" helpers:NavHelper.NavigateTo="views:MorePage" />
         </NavigationView.MenuItems>
         <NavigationView.HeaderTemplate>
             <DataTemplate>

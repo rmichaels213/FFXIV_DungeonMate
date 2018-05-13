@@ -20,6 +20,8 @@ namespace FFXIV_DungeonMate.Models
 
         public string BestTime { get; set; }
 
+        public List<string> DynamicNotes { get; set; }
+
         public string Note1Name { get; set; }
         public string Note2Name { get; set; }
         public string Note3Name { get; set; }

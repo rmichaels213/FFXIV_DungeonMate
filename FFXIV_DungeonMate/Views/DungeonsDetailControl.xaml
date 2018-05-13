@@ -85,5 +85,6 @@
                 <Button x:Name="ButtonNote10Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonSave_Click"/>
             </StackPanel>
         </StackPanel>
+       
     </ScrollViewer>
 </UserControl>

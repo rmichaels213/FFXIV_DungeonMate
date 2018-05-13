@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation\ActivationHandler.cs" />
+    <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
     <Compile Include="Helpers\SettingsStorageExtensions.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Services\DungeonDataService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SampleDataService.cs" />
+    <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Views\DungeonsDetailControl.xaml.cs">
       <DependentUpon>DungeonsDetailControl.xaml</DependentUpon>
     </Compile>
@@ -137,11 +139,8 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MoreDetailControl.xaml.cs">
-      <DependentUpon>MoreDetailControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MorePage.xaml.cs">
-      <DependentUpon>MorePage.xaml</DependentUpon>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellPage.xaml.cs">
       <DependentUpon>ShellPage.xaml</DependentUpon>
@@ -190,11 +189,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\MoreDetailControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MorePage.xaml">
+    <Page Include="Views\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -216,6 +211,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Data\DefaultDungeonData.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

@@ -40,6 +40,12 @@ namespace FFXIV_DungeonMate.Views
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
+            if (e.SourcePageType == typeof(SettingsPage))
+            {
+                Selected = navigationView.SettingsItem as NavigationViewItem;
+                return;
+            }
+
             Selected = navigationView.MenuItems
                             .OfType<NavigationViewItem>()
                             .FirstOrDefault(menuItem => IsMenuItemForPageType(menuItem, e.SourcePageType));
@@ -53,6 +59,12 @@ namespace FFXIV_DungeonMate.Views
 
         private void OnItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
+            if (args.IsSettingsInvoked)
+            {
+                NavigationService.Navigate(typeof(SettingsPage));
+                return;
+            }
+
             var item = navigationView.MenuItems
                             .OfType<NavigationViewItem>()
                             .First(menuItem => (string)menuItem.Content == (string)args.InvokedItem);

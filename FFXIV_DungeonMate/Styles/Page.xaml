@@ -6,4 +6,11 @@
         <Setter Property="Background" Value="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
     </Style>
 
+    <!--Common buttons-->
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="10,10,0,0" />
+    </Style>
+
 </ResourceDictionary>
