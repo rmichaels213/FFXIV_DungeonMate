@@ -6,6 +6,7 @@ using FFXIV_DungeonMate.Helpers;
 using FFXIV_DungeonMate.Services;
 
 using Windows.ApplicationModel;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -17,6 +18,8 @@ namespace FFXIV_DungeonMate.Views
     public sealed partial class SettingsPage : Page, INotifyPropertyChanged
     {
         public string DefaultDataDescription = "Revert to default data?";
+
+        public string UserDataLocation = ApplicationData.Current.LocalFolder.ToString();
 
         private ElementTheme _elementTheme = ThemeSelectorService.Theme;
 

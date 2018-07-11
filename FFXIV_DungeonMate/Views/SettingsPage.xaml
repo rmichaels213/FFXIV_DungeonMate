@@ -82,6 +82,8 @@
                     x:Uid="Settings_DefaultDataButton"
                     Style="{StaticResource ButtonStyle}"
                     Click="ButtonLoadDefaultData_Click"/>
+                <TextBlock
+                    Text="{x:Bind UserDataLocation, Mode=OneWay}" />
             </StackPanel>
 
             <TextBlock
